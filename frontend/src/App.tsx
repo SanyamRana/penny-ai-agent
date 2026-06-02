@@ -607,7 +607,24 @@ export default function App() {
 
   const categoriesList = ['All', ...new Set(budgets.map(b => b.category))];
   const currentAgentState = getAgentStatus();
-
+  <style>{`
+      button {
+        background-color: #1e1e2f !important;
+        color: #ffffff !important;
+        border: 1px solid #3b3b4f !important;
+        padding: 6px 12px !important;
+        border-radius: 6px !important;
+        cursor: pointer !important;
+      }
+      button:hover {
+        background-color: #2b2b3f !important;
+      }
+      .sidebar-item, .nav-tabs {
+        display: flex !important;
+        align-items: center !important;
+        gap: 10px !important;
+      }
+    `}</style>
   return (
     <div className="min-h-screen text-slate-100 p-4 lg:p-8 flex flex-col gap-6 relative">
       {/* Background Orbs */}
